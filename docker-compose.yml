@@ -1,0 +1,10 @@
+services:
+  bridge:
+    build: .
+    container_name: tradovate-tv-bridge
+    restart: always
+    env_file: .env
+    ports:
+      - "80:80"
+    volumes:
+      - ./logs:/app/logs
